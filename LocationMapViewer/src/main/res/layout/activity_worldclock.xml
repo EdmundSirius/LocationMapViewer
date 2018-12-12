@@ -96,6 +96,12 @@
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="9dp"
             tools:layout_editor_absoluteY="402dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="111dp"
+            android:text="Button" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
