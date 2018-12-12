@@ -79,10 +79,9 @@
             android:id="@+id/cmd_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:src="@android:drawable/ic_menu_more"
             android:layout_alignParentRight="true"
-            />
+            android:src="@android:drawable/ic_menu_more"
+            android:visibility="gone" />
 
         <Button
             android:layout_width="wrap_content"
@@ -135,14 +134,16 @@
         </LinearLayout>
 
         <!-- listview with bookmarks -->
-        <ListView android:id="@+id/android:list"
-            android:layout_width="fill_parent" android:layout_height="fill_parent"
+        <ListView
+            android:id="@+id/android:list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="@+id/commands"
+            android:layout_alignParentRight="@+id/commands"
             android:layout_below="@id/commands"
             android:choiceMode="singleChoice"
-            android:layout_alignParentRight="@+id/commands"
-            android:layout_alignParentLeft="@+id/commands"
             android:dividerHeight="2dp"
-            android:fastScrollEnabled="true"/>
+            android:fastScrollEnabled="true" />
 
     </RelativeLayout>
 </android.support.v4.widget.DrawerLayout>

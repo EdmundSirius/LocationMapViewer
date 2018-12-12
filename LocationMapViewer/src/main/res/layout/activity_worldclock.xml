@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorldClock">
+
+    <LinearLayout
+        android:layout_width="395dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Your latitude and longitude:"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/x"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:text="North:"
+            android:textSize="18sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/y"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="East:"
+            android:textSize="18sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="113dp" />
+
+        <TextView
+            android:id="@+id/zone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Time Zone:"
+            android:textSize="18sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="169dp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="214dp" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
+            android:text="Your time:"
+            android:textSize="24sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="228dp" />
+
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:text="Local time:"
+            android:textSize="24sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="314dp" />
+
+        <TextView
+            android:id="@+id/title4"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:text="The time difference:"
+            android:textSize="24sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="402dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

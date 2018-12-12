@@ -28,25 +28,24 @@ android {
     }
     productFlavors {
     }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
     // compile project(':geo:k3b-geoHelper')
     compile 'com.github.k3b:k3b-geoHelper:1.1.5'
-
     // androidTestCompile 'org.mod4j.org:junit:3.8.2'
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-	
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     // required by osmdroid
-    compile 'com.android.support:support-v4:21.0.2'
     // this is osmdroid
     // compile project(':osmdroid-android') // local copy
     compile 'org.osmdroid:osmdroid-android:5.2'
     // non local copy from repositories
-	
     // compile project(':OSMBonusPack')
-	compile 'com.github.MKergall.osmbonuspack:OSMBonusPack:v5.8.1'
-
+    compile 'com.github.MKergall.osmbonuspack:OSMBonusPack:v5.8.1'
     // local copy
     compile 'org.slf4j:slf4j-api:1.7.7@jar'
     // include if you want to see debug/trace logmessages
@@ -54,4 +53,12 @@ dependencies {
     // only error and warn
     compile 'eu.lp0.slf4j:slf4j-android:1.7.7-1@jar'
     // if you want to see debug traces, too. requires config file
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //androidTestCompile 'org.junit.jupiter:junit-jupiter-api'
+    //androidTestCompile 'junit:junit:4.12'
+    testCompile'junit:junit:4.12'
+
 }

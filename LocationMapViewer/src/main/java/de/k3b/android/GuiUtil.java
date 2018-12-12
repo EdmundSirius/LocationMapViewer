@@ -28,9 +28,8 @@ public class GuiUtil {
     public static String getAppVersionName(final Context context) {
         try {
 
-            final String versionName = context.getPackageManager()
+            return context.getPackageManager()
                     .getPackageInfo(context.getPackageName(), 0).versionName;
-            return versionName;
         } catch (final NameNotFoundException e) {
         }
         return null;

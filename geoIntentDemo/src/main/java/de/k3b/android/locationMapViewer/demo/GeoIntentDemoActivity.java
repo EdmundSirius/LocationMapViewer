@@ -119,8 +119,7 @@ public class GeoIntentDemoActivity extends Activity {
         final Uri uri = (src != null) ? src.getData() : null;
         if (uri != null) return uri.toString();
 
-        String intentUri = (src != null) ? src.toUri(Intent.URI_INTENT_SCHEME) : null;
-        return intentUri;
+        return (src != null) ? src.toUri(Intent.URI_INTENT_SCHEME) : null;
     }
 
     @Override

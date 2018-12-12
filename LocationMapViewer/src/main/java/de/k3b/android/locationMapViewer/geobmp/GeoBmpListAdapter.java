@@ -62,7 +62,7 @@ class GeoBmpListAdapter extends
             final IGeoRepository repository,
             final GeoBmpDto... additionalPoints
     ) {
-        final List<GeoBmpDto> items = repository.reload();
+        final List items = repository.reload();
 
         if (additionalPoints != null) {
             for(int index = additionalPoints.length -1; index >= 0; index--) {

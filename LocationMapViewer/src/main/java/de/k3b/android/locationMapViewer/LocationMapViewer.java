@@ -737,6 +737,23 @@ public class LocationMapViewer extends Activity implements Constants, BookmarkLi
                 SettingsActivity.show(this, R.id.cmd_settings);
                 return true;
             }
+
+            case R.id.cmd_worldclock: {
+                final IGeoPoint mapCenter = mMapView.getMapCenter();
+                //new WorldClock(mapCenter.getLatitude(),mapCenter.getLongitude());
+                WorldClock.setLatitude(mapCenter.getLatitude());
+                WorldClock.setLongitude(mapCenter.getLongitude());
+                /*final SharedPreferences.Editor edit = mPrefs.edit();
+                edit.putString(PREFS_CURRENT_NORTH, LAT_LON2TEXT.format(mapCenter.getLatitude()));
+                edit.putString(PREFS_CURRENT_EAST, LAT_LON2TEXT.format(mapCenter.getLongitude()));
+                edit.commit();*/
+                /*Intent intent = new Intent();
+                intent.setClass(LocationMapViewer.this, SettingsActivity.class);
+                LocationMapViewer.this.startActivity(intent);
+                startActivity(intent);*/
+                WorldClock.show(this,R.id.cmd_worldclock);
+                return true;
+            }
         }
         return false;
     }
